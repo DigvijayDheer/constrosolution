@@ -11,6 +11,12 @@ import { listProducts } from '../actions/productActions'
 import icon1 from '../assets/img/icon-1.png'
 import icon2 from '../assets/img/icon-2.png'
 import icon3 from '../assets/img/icon-3.png'
+import img1 from '../assets/img/1.png'
+import img2 from '../assets/img/2.png'
+import img3 from '../assets/img/3.png'
+import img4 from '../assets/img/4.png'
+import img5 from '../assets/img/5.png'
+import img6 from '../assets/img/6.png'
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword
@@ -30,6 +36,76 @@ const HomeScreen = ({ match }) => {
     <>
       <Meta />
       <ProductCarousel />
+      <section className="latest-blog spad">
+        <div className="container">
+          <div className="benefit-items">
+            <div className="row">
+              <div className="col-lg-4">
+                <div className="single-benefit">
+                  <div className="sb-icon">
+                    <img src={img1} alt="" width="40%" />
+                  </div>
+                  <div className="sb-text">
+                    <h6>Electronics</h6>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="single-benefit">
+                  <div className="sb-icon">
+                    <img src={img2} alt="" width="40%" />
+                  </div>
+                  <div className="sb-text">
+                    <h6>Building Materials</h6>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="single-benefit">
+                  <div className="sb-icon">
+                    <img src={img3} alt="" width="40%" />
+                  </div>
+                  <div className="sb-text">
+                    <h6>Tiles</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-4">
+                <div className="single-benefit">
+                  <div className="sb-icon">
+                    <img src={img4} alt="" width="40%" />
+                  </div>
+                  <div className="sb-text">
+                    <h6>Plumbing</h6>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="single-benefit">
+                  <div className="sb-icon">
+                    <img src={img5} alt="" width="40%" />
+                  </div>
+                  <div className="sb-text">
+                    <h6>Sanitaryware</h6>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="single-benefit">
+                  <div className="sb-icon">
+                    <img src={img6} alt="" width="40%" />
+                  </div>
+                  <div className="sb-text">
+                    <h6>Wall Finish</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="row">
         <div className="col-lg-12">
           <div className="section-title">

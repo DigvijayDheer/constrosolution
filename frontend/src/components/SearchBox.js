@@ -15,12 +15,12 @@ const SearchBox = ({ history }) => {
 
   return (
     <Form onSubmit={submitHandler} >
-      <div class="advanced-search">
-      <div class="input-group">
-        <input type="text" placeholder="What do you need?" onChange={(e) => setKeyword(e.target.value)} />
-        <button type="button"><i class="fa fa-search"></i></button>
+      <div className="advanced-search">
+        <div className="input-group">
+          <input type="text" placeholder="What do you need?" onChange={(e) => setKeyword(e.target.value)} />
+          <button type="button"><i className="fa fa-search"></i></button>
+        </div>
       </div>
-    </div>
     </Form>
   )
 }

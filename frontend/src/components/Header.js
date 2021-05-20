@@ -22,7 +22,7 @@ const Header = () => {
           <div className="ht-left">
             <div className="mail-service">
               <a href="mailto:constrosolution26@gmail.com"><i className=" fa fa-envelope"></i>constrosolution26@gmail.com</a>
-              {/* <a href="tel:+910000000000"><i className=" fa fa-phone"></i>+910000000000</a> */}
+              <a href="tel:+918002862026"><i className=" fa fa-phone"></i>+918002862026</a>
             </div>
           </div>
           <div className="ht-right">
@@ -72,31 +72,33 @@ const Header = () => {
       </div>
       <div className="nav-item">
         <div className="container">
-          <div className="nav-depart">
-            <div className="depart-btn">
-              <i className="ti-menu"></i>
-              <span>All departments</span>
-              <ul className="depart-hover">
-                <li className="active"><Link to="/">Building Materials</Link></li>
-                <li><Link to="/">TMT Steel Bars</Link></li>
-                <li><Link to="/">Bricks</Link></li>
-                <li><Link to="/">Aggregates</Link></li>
-                <li><Link to="/">Water Proofing</Link></li>
-                <li><Link to="/">Wall Finish</Link></li>
-              </ul>
-            </div>
-          </div>
           <nav className="nav-menu">
             <ul>
-              <li className="active"><Link to="./index.html">Home</Link></li>
-              <li><Link to="/">Shop</Link></li>
-              <li><Link to="/">Contact</Link></li>
-              <li><Link to="/">Pages</Link>
+              <li><Link to="/">Waterproofing</Link>
                 <ul className="dropdown">
-                  <li><Link to="/cart">Shopping Cart</Link></li>
-                  <li><Link to="/placeorder">Checkout</Link></li>
-                  <li><Link to="/register">Register</Link></li>
-                  <li><Link to="/login">Login</Link></li>
+                  <li><Link to="/">Dr. Fixit</Link></li>
+                </ul>
+              </li>
+              <li><Link to="/">Wall Finish</Link>
+                <ul className="dropdown">
+                  <li><Link to="/">Paints</Link></li>
+                  <li><Link to="/">wall putty</Link></li>
+                  <li><Link to="/">white cement</Link></li>
+                </ul>
+              </li>
+              <li><Link to="/">Building Materials</Link>
+                <ul className="dropdown">
+                  <li><Link to="/">cement</Link></li>
+                  <li><Link to="/">tmt steele bars</Link></li>
+                  <li><Link to="/">bricks</Link></li>
+                </ul>
+              </li>
+              <li><Link to="/">Aggregates</Link>
+                <ul className="dropdown">
+                  <li><Link to="/">Tiles</Link></li>
+                  <li><Link to="/">Marble</Link></li>
+                  <li><Link to="/">Sanitaryware</Link></li>
+                  <li><Link to="/">Plumbing</Link></li>
                 </ul>
               </li>
               {userInfo && userInfo.isAdmin && (

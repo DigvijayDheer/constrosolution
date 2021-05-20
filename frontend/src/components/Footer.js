@@ -10,8 +10,7 @@ const Footer = () => {
           <div className="col-lg-3">
             <div className="footer-left">
               <ul>
-                {/* <li>Address: 60-49 Road 11378 New York</li>
-                <li>Phone: +910000000000</li> */}
+                <li>Phone: +918002862026</li>
                 <li>Email: cosntrosolution26@gmail.com</li>
               </ul>
               <div className="footer-social">
