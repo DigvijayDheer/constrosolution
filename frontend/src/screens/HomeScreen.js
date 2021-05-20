@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Product from '../components/Product'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -106,6 +107,55 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </section>
+      <div className="container">
+        <div className="nav-item">
+          <div className="nav-depart">
+            <div className="depart-btn">
+              <i className="ti-menu"></i>
+              <span>All departments</span>
+              <ul className="depart-hover">
+                <li className="active"><Link to="/">Building Materials</Link></li>
+                <li><Link to="/">TMT Steel Bars</Link></li>
+                <li><Link to="/">Bricks</Link></li>
+                <li><Link to="/">Aggregates</Link></li>
+                <li><Link to="/">Water Proofing</Link></li>
+                <li><Link to="/">Wall Finish</Link></li>
+              </ul>
+            </div>
+          </div>
+          <nav className="nav-menu">
+            <ul>
+              <li><Link to="/">Waterproofing</Link>
+                <ul className="dropdown">
+                  <li><Link to="/">Dr. Fixit</Link></li>
+                </ul>
+              </li>
+              <li><Link to="/">Wall Finish</Link>
+                <ul className="dropdown">
+                  <li><Link to="/">Paints</Link></li>
+                  <li><Link to="/">wall putty</Link></li>
+                  <li><Link to="/">white cement</Link></li>
+                </ul>
+              </li>
+              <li><Link to="/">Building Materials</Link>
+                <ul className="dropdown">
+                  <li><Link to="/">cement</Link></li>
+                  <li><Link to="/">tmt steele bars</Link></li>
+                  <li><Link to="/">bricks</Link></li>
+                </ul>
+              </li>
+              <li><Link to="/">Aggregates</Link>
+                <ul className="dropdown">
+                  <li><Link to="/">Tiles</Link></li>
+                  <li><Link to="/">Marble</Link></li>
+                  <li><Link to="/">Sanitaryware</Link></li>
+                  <li><Link to="/">Plumbing</Link></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <div className="row">
         <div className="col-lg-12">
           <div className="section-title">
