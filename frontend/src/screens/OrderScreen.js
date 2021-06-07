@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { PayPalButton } from 'react-paypal-button-v2'
 import { Link } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Card, Button, Container } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -200,19 +199,14 @@ const OrderScreen = ({ match, history }) => {
                   <Col>₹{order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
-              {!order.isPaid && (
-                <ListGroup.Item>
-                  {loadingPay && <Loader />}
-                  {!sdkReady ? (
-                    <Loader />
-                  ) : (
-                    <PayPalButton
-                      amount={order.totalPrice}
-                      onSuccess={successPaymentHandler}
-                    />
-                  )}
-                </ListGroup.Item>
-              )}
+              <ListGroup.Item>
+                {loadingPay && <Loader />}
+                {!sdkReady ? (
+                  <Loader />
+                ) : (
+                  <Message variant='success'>Order Placed</Message>
+                )}
+              </ListGroup.Item>
               {loadingDeliver && <Loader />}
               {userInfo &&
                 userInfo.isAdmin &&
@@ -228,6 +222,22 @@ const OrderScreen = ({ match, history }) => {
                   </ListGroup.Item>
                 )}
             </ListGroup>
+            {/* <ListGroup>
+              {loadingDeliver && <Loader />}
+              {userInfo &&
+                userInfo.isAdmin &&
+                !order.isPaid && (
+                  <ListGroup.Item>
+                    <Button
+                      type='button'
+                      className='btn btn-block'
+                      onClick={successPaymentHandler}
+                    >
+                      Mark As Paid
+                    </Button>
+                  </ListGroup.Item>
+                )}
+            </ListGroup> */}
           </Card>
         </Col>
       </Row>
